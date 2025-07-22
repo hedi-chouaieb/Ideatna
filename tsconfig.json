@@ -1,0 +1,114 @@
+{
+  "compilerOptions": {
+    // Basic TypeScript options
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "es6", "es2020"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+
+    // Next.js specific options
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+
+    // Path mapping for clean imports
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/lib/types/*"],
+      "@/utils/*": ["./src/lib/utils/*"],
+      "@/stores/*": ["./src/lib/stores/*"],
+      "@/api/*": ["./src/lib/api/*"],
+      "@/config/*": ["./src/lib/config/*"],
+      "@/validations/*": ["./src/lib/validations/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/data/*": ["./src/data/*"],
+      "@/public/*": ["./public/*"]
+    },
+
+    // Additional strict options for better code quality
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Advanced TypeScript features
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+    "useUnknownInCatchVariables": true,
+
+    // Module resolution options
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+
+    // Emit options
+    "removeComments": false,
+    "importsNotUsedAsValues": "remove",
+    "preserveConstEnums": true,
+
+    // Experimental decorators (if needed for certain libraries)
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false
+  },
+
+  // Include patterns
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*",
+    "types/**/*"
+  ],
+
+  // Exclude patterns
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "cypress",
+    "e2e"
+  ],
+
+  // TypeScript extensions
+  "extends": [],
+
+  // Compiler options for different environments
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es2018"
+    }
+  }
+}
